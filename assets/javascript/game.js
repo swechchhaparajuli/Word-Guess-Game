@@ -42,23 +42,30 @@
 
 
     document.onkeyup = function(event) {
+
+        
+
     var vid = document.getElementById("circleOfLife"); 
       // Determines which key was pressed.
         var userGuess = event.key;
         var printWord = "";
         
+        console.log(dash);
       // Randomly chooses a choice from the options array. This is the Computer's guess.
       
       if ((userGuess === "x") || (userGuess === "X")) {
          vid.play();
         begin.textContent = "HangMan";
-      }
+      
         
         dash = ["_ "];
       for (var i = 0; i < hangWord.length-1; i++ ){
         dash.push("_ ");
         printWord = printWord + dash[i];
       }
+    }
+
+    console.log(dash);
 
 
       hangmanWord.textContent = printWord;
@@ -80,15 +87,16 @@
                    found = true;
                    //indexFound = i;
                    dash[i] = hangWord[i];
+                    
                    hangmanWord.textContent = dash.join('');
                }
                if (found){
                  if (i==(hangWord.length-1)){
                    wins++;
                    turns--;
-                   console.log(turns);
                    winsText.textContent = "wins: " + wins;
                    turnsText.textContent = "turns left: " + turns;
+                   hangmanWord.textContent = dash.join('');
                    //dash[indexFound] = hangWord[indexFound];
                    //for some reason adding thismakes the wins stop incrementing
                  }
@@ -97,14 +105,17 @@
                  turns--;
                  lossesText.textContent = "losses: " + losses;
                  turnsText.textContent = "turns left: " + turns;
-              }    
+                 hangmanWord.textContent = dash.join('');
+              } 
+
 
               if (userGuess != "x" || userGuess != "X"){
                 userChoiceText.textContent = "You chose: " + userGuess;
             }
+         
 
               if (turns < 0){
-                userChoiceText.textContent = null;
+                userChoiceText.textContent = "You lost, Game Over";
                 hangmanWord.textContent = null;
                 winsText.textContent = null;
                 lossesText.textContent = null;
@@ -113,13 +124,15 @@
               }
               if(hangWord === dash.join('')){
                 
-                userChoiceText.textContent = null;
+                userChoiceText.textContent = "Congratulations, You Won!";
                 hangmanWord.textContent = null;
                 winsText.textContent = null;
                 lossesText.textContent = null;
                 turnsText.textContent = null;
                 
               }
+
+              
         }
             
     
@@ -128,7 +141,6 @@
 
        
 
-        console.log(dash)
         console.log(hangWord)
 
         // Hide the directions
