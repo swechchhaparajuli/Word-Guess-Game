@@ -11,7 +11,7 @@
    
     function giveHintImg(){
         hintImg = document.getElementById("hint-Img");
-        hintImg.src = '/assets/images/'+ hangWord + ".jpg";
+        hintImg.src = `./assets/images/${hangWord}.jpg`
     }
    
 
@@ -145,7 +145,7 @@
                 winsText.textContent = hangWord;
                 lossesText.textContent = null;
                 turnsText.textContent = null;
-                hintImg.src = 'file:///Users/Swechacha/Desktop/Bootcamp/week2/Word-Guess-Game/assets/images/'+ hangWord + ".jpg";
+                hintImg.src = './assets/images/'+ hangWord + ".jpg";
                   
               }
               if(hangWord === dash.join('')){
