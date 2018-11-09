@@ -29,11 +29,11 @@
     begin.textContent = "press X to begin";
 
     // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
-    var wordChoices = ["words", "elephant", "onomonopiea", "pteradactyl", "arthopod","l"];
+    var wordChoices = ["Simba", "Nala", "HakunaMatata", "Mufasa", "pride","Rafiki","lion" , "LionKing", "Hamlet" , "Timone", "Pumba", "Scar"];
 
     // Creating variables to hold the number of wins, losses, and ties. They start at 0.
     var wins = 0;
-    var losses = 0;
+    var losses = -1;
     var turns = 9;
     var indexFound;
     var dash;
@@ -49,7 +49,7 @@
 
     var hangWord = wordChoices[Math.floor(Math.random() * wordChoices.length)];
     // chooses a word
-    turns = hangWord.length + 5;
+    turns = hangWord.length + 3;
 
 
     document.onkeyup = function(event) {
@@ -64,15 +64,22 @@
         console.log(dash);
       // Randomly chooses a choice from the options array. This is the Computer's guess.
       
-      if ((userGuess === "x") || (userGuess === "X")) {
+      if (((userGuess === "x") || (userGuess === "X")) && true) {
          vid.play();
         begin.textContent = "HangMan";
+        
       
         
         dash = ["_ "];
       for (var i = 0; i < hangWord.length-1; i++ ){
-        dash.push("_ ");
-        printWord = printWord + dash[i];
+        if(hangWord[i]== " "){
+            dash.push(" ");
+            printWord = printWord + " ";
+        }else{
+            dash.push("_ ");
+            printWord = printWord + dash[i];
+        }
+        
       }
     }
 
@@ -80,6 +87,7 @@
 
 
       hangmanWord.textContent = printWord;
+      
       
       lossesText.textContent = "losses: " + losses;
       winsText.textContent = "wins: " + wins;
@@ -104,7 +112,7 @@
                if (found){
                  if (i==(hangWord.length-1)){
                    wins++;
-                   turns--;
+                   //turns--;
                    winsText.textContent = "wins: " + wins;
                    turnsText.textContent = "turns left: " + turns;
                    hangmanWord.textContent = dash.join('');
@@ -126,8 +134,9 @@
          
 
               if (turns < 0){
+
                 userChoiceText.textContent = "You lost, Game Over";
-                hangmanWord.textContent = null;
+                hangmanWord.textContent = hangWord;
                 winsText.textContent = null;
                 lossesText.textContent = null;
                 turnsText.textContent = null;
@@ -136,7 +145,7 @@
               if(hangWord === dash.join('')){
                 
                 userChoiceText.textContent = "Congratulations, You Won!";
-                hangmanWord.textContent = null;
+                hangmanWord.textContent = hangWord;
                 winsText.textContent = null;
                 lossesText.textContent = null;
                 turnsText.textContent = null;
