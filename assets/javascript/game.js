@@ -3,7 +3,7 @@
    
    
    var begin = document.getElementById("begin-game");
-   var temp;
+  
 
     function restartPage(){ 
         location.reload();
@@ -11,9 +11,8 @@
 
    
     function giveHintImg(){
-        temp = hangWord.toLowerCase();
         hintImg = document.getElementById("hint-Img");
-        hintImg.src = `./assets/images/${temp}.jpg`;
+        hintImg.src = `./assets/images/${hangWord}.jpg`;
     }
    
 
