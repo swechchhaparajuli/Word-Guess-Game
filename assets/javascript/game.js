@@ -66,7 +66,7 @@
       
       if (((userGuess === "x") || (userGuess === "X")) && true) {
          vid.play();
-        begin.textContent = "HangMan";
+        begin.textContent = "Lion King Word-Guess Game";
         
       
         
@@ -135,9 +135,9 @@
 
               if (turns < 0){
 
-                userChoiceText.textContent = "You lost, Game Over";
-                hangmanWord.textContent = hangWord;
-                winsText.textContent = null;
+                userChoiceText.textContent = "You lost, Game Over.";
+                hangmanWord.textContent = "The word was: " ;
+                winsText.textContent = hangWord;
                 lossesText.textContent = null;
                 turnsText.textContent = null;
                   
@@ -151,17 +151,10 @@
                 turnsText.textContent = null;
                 
               }
-
-              
+   
         }
-            
-    
-     
-        
 
-       
-
-        console.log(hangWord)
+        console.log(hangWord);
 
         // Hide the directions
         //directionsText.textContent = "";
