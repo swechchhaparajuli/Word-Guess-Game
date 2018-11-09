@@ -1,0 +1,26 @@
+
+
+h1{
+    font-size: 40px;
+    text-align: center;
+   
+}
+
+p{
+    font-family: 'Poor Story', cursive;
+    text-align: center;
+    font-size: 20px;
+}
+
+body{
+    background-image: url("file:///Users/Swechacha/Desktop/Bootcamp/week2/Word-Guess-Game/assets/images/background.jpg");
+    background-size: 135%;
+}
+
+#gameBox{
+    margin-top: 100px;
+}
+
+.jumbotron{
+    opacity: 0.8;
+}

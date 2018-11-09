@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+  
+
+</head>
+
+<body>
+
+  <div>
+   
+   
+   
+    
+    
+  <div class = "container" id = "gameBox">
+    <div class="jumbotron">
+
+        <h1 id= "begin-game" class = "display-4" style = "font-family: 'Poor Story', cursive"></h1>
+        <br>
+        <br>
+        <p id="userchoice-text" class = "lead"> </p>
+        <br>
+        <hr class="my-4">
+
+        <p id="hangman-word" class = "lead"></p>
+        <br>
+        <br>
+        <p id="wins-text" class = "lead"></p>
+        <br>
+        <br>
+        <p id="losses-text" class = "lead"></p>
+        <br>
+        <br>
+        <p id="turns-text" class = "lead"></p>
+        <br>
+        <br>
+
+        <a class="btn btn-danger btn-lg" href="#" role="button" id = "reset">Reset</a>
+      </div>
+
+        <audio controls autoplay id= "circleOfLife">
+
+            <source src="assets/sounds/circle.mp3" type="audio/mpeg"> Circle of Life 
+        </audio>
+
+    </div>
+  </div>
+
+  <script src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
+
