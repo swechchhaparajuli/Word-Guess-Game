@@ -11,7 +11,7 @@
    
     function giveHintImg(){
         hintImg = document.getElementById("hint-Img");
-        hintImg.src = 'file:///Users/Swechacha/Desktop/Bootcamp/week2/Word-Guess-Game/assets/images/'+ hangWord + ".jpg";
+        hintImg.src = '/assets/images/'+ hangWord + ".jpg";
     }
    
 
