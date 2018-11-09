@@ -1,6 +1,17 @@
 
 
-    var begin = document.getElementById("begin-game");
+   
+   
+   var begin = document.getElementById("begin-game");
+
+    function restartPage(){ 
+        location.reload();
+    }
+
+   
+       
+   
+
 
   /*  start();
 

@@ -24,3 +24,11 @@ body{
 .jumbotron{
     opacity: 0.8;
 }
+
+#reset{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    font-family: 'Poor Story', cursive;
+    font-size: 20px;
+}
