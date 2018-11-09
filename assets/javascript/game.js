@@ -11,7 +11,7 @@
    
     function giveHintImg(){
         hintImg = document.getElementById("hint-Img");
-        hintImg.src = `./assets/images/${hangWord.toLowerCase()}.jpg`
+        hintImg.src = `./assets/images/${hangWord}.jpg`.toLowerCase();
     }
    
 
