@@ -13,8 +13,9 @@ p{
 }
 
 body{
-    background-image: url("assets/images/background.jpg");
-    background-size: 135%;
+    position: relative;
+    background-image: url("/Users/Swechacha/Desktop/Bootcamp/week2/Word-Guess-Game/assets/images/background.jpg");
+    background-size: 100%;
 }
 
 #gameBox{
@@ -31,4 +32,23 @@ body{
     padding-bottom: 10px;
     font-family: 'Poor Story', cursive;
     font-size: 20px;
+}
+
+
+
+#hint{
+    float: right;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    font-family: 'Poor Story', cursive;
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+#hint-Img{
+    height: 120px;
+    float: right;
+   
+    
 }

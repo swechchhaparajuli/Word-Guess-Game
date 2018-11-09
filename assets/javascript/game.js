@@ -9,7 +9,10 @@
     }
 
    
-       
+    function giveHintImg(){
+        hintImg = document.getElementById("hint-Img");
+        hintImg.src = 'file:///Users/Swechacha/Desktop/Bootcamp/week2/Word-Guess-Game/assets/images/'+ hangWord + ".jpg";
+    }
    
 
 
@@ -29,7 +32,7 @@
     begin.textContent = "press X to begin";
 
     // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
-    var wordChoices = ["Simba", "Nala", "HakunaMatata", "Mufasa", "pride","Rafiki","lion" , "LionKing", "Hamlet" , "Timone", "Pumba", "Scar"];
+    var wordChoices = ["Simba", "Nala", "HakunaMatata", "Mufasa", "pride","Rafiki","lion" , "LionKing", "Hamlet" , "Timone", "Pumbaa", "Scar"];
 
     // Creating variables to hold the number of wins, losses, and ties. They start at 0.
     var wins = 0;
@@ -45,6 +48,7 @@
     var winsText = document.getElementById("wins-text");
     var lossesText = document.getElementById("losses-text");
     var turnsText = document.getElementById("turns-text");
+    var hintImg = document.getElementById("hint-Img");
 
 
     var hangWord = wordChoices[Math.floor(Math.random() * wordChoices.length)];
@@ -54,6 +58,7 @@
 
     document.onkeyup = function(event) {
 
+       
         
 
     var vid = document.getElementById("circleOfLife"); 
@@ -140,6 +145,7 @@
                 winsText.textContent = hangWord;
                 lossesText.textContent = null;
                 turnsText.textContent = null;
+                hintImg.src = 'file:///Users/Swechacha/Desktop/Bootcamp/week2/Word-Guess-Game/assets/images/'+ hangWord + ".jpg";
                   
               }
               if(hangWord === dash.join('')){
